@@ -4,8 +4,7 @@ SingleFieldSubmit = React.createClass({
   },
   getDefaultProps() {
     return {
-      inputValue:  ""  ,
-      placeholder: "New..."
+      inputValue:  ""
     };
   },
   getInitialState() {
@@ -20,13 +19,6 @@ SingleFieldSubmit = React.createClass({
     e.preventDefault();
     this.handleInput();
   },
-  handleOnKeyPress(e) {
-    // submit via return key for mobile safari
-    if ( e.which === 13 ) {
-       e.preventDefault();
-      this.handleInput();
-    };
-  },
   handleInput(){
     this.props.handleInput(this.state.inputValue.trim());
   },
@@ -35,15 +27,9 @@ SingleFieldSubmit = React.createClass({
       <form className="single-field-submit" onSubmit={this.handleSubmit}>
         <input
           type="text"
-          name="newNote"
-          placeholder={this.props.placeholder}
           value={this.state.inputValue}
           onChange={this.updateInputValue}
-          autoFocus={this.state.autoFocus}
-          onKeyPress={this.handleOnKeyPress}
-          onBlur={this.handleOnBlur}
         />
-         <input type="submit" style={{display:'none'}} />
       </form>
     )
   }

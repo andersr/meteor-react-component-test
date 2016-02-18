@@ -1,6 +1,6 @@
-describe('Test a React Component Callback', function () {
+describe('SingleFieldSubmit Component', function () {
 
-  it('returns the value input into the form on submit', function () {
+  it('should, on submit, return the value input into the form', function () {
     
     //SETUP
     let mockUserInput = 'Test input';
