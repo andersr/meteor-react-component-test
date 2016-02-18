@@ -3,4 +3,4 @@
 This repo contains a somewhat clunky way of testing a React component's callback value to a parent component.  I am interested in finding a better way of doing this.
 
 
-- ```cd app && meteor```
+To run, clone this repo, then ```cd app && meteor```
